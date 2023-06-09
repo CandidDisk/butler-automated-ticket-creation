@@ -23,7 +23,6 @@ API will be ready at [http://localhost:3001](http://localhost:3001)
 
 To create a new ticket
 
-
 ``` bash
 Post a ticket to [http://localhost:3001/tickets/post-ticket](http://localhost:3001/tickets/post-ticket)
 
@@ -40,6 +39,38 @@ Post a ticket to [http://localhost:3001/tickets/post-ticket](http://localhost:30
   "title": "My neighbour is loud",
   "tel": 12344567
 }
+```
+
+To fetch all tickets
+
+
+``` bash
+Get request [http://localhost:3001/tickets](http://localhost:3001/tickets)
+
+# Ticket response body follows Ticket model array
+[
+  {
+    "title": string,
+    "tel": number,
+    "description": string, # optional
+    "file": string, # optional
+  }
+]
+
+# Example get response body
+[
+    {
+        "title": "test22",
+        "tel": 123,
+        "creationDate": 1686285024647,
+        "description": "123"
+    },
+    {
+        "title": "test222",
+        "tel": 123,
+        "creationDate": 1686285328567,
+    }
+]
 ```
 
 
