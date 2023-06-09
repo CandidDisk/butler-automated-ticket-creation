@@ -10,4 +10,12 @@ const validateTicket = (ticket: Ticket) => {
     return {invalid: false, missingParam: false, invalidType: false};
 };
 
-export {validateTicket}
+const checkDuplicates = (ticketCheck: Ticket, ticketArr: Ticket[]): boolean => {
+    const ticketExists = ticketArr.find(
+        (ticket) => ticket.title === ticketCheck.title && ticket.tel === ticketCheck.tel
+    )
+
+    return !!ticketExists
+}
+
+export {validateTicket, checkDuplicates}
