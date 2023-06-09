@@ -24,7 +24,7 @@ API will be ready at [http://localhost:3001](http://localhost:3001)
 To create a new ticket
 
 ``` bash
-Post a ticket to [http://localhost:3001/tickets/post-ticket](http://localhost:3001/tickets/post-ticket)
+Post a ticket to http://localhost:3001/tickets/post-ticket
 
 # Ticket body follows Ticket model
 {
@@ -45,7 +45,7 @@ To fetch all tickets
 
 
 ``` bash
-Get request [http://localhost:3001/tickets](http://localhost:3001/tickets)
+Get request http://localhost:3001/tickets
 
 # Ticket response body follows Ticket model array
 [
