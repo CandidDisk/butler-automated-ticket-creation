@@ -49,4 +49,14 @@ const createTicket = async (ticket: Ticket) => {
     }
 }
 
-export {createTicket}
+const fetchTickets = async () => {
+    const ticketJson = await getTicketsFromJson()
+
+    if (!ticketJson) {
+        return {status: {code: 500, error: true}, body: "Internal Server Error: unable to access tickets json"}
+    }
+
+    return {status: {code: 200, error: false}, body: ticketJson }
+}
+
+export { createTicket, fetchTickets }
