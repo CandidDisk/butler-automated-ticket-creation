@@ -2,7 +2,7 @@ import express, { Application, Request, Response } from 'express';
 
 const app: Application = express();
 
-const tickets = require("./routes/tickets");
+const tickets = require("./routes/TicketRoutes");
 
 const PORT: number = 3001;
 
