@@ -5,4 +5,4 @@ interface Ticket {
     file?: File | string
 }
 
-export default Ticket
+export { Ticket }
