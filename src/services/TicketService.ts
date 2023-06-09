@@ -28,6 +28,7 @@ const createTicket = async (ticket: Ticket) => {
         const newTicket: Ticket = {
             title: ticket.title,
             tel: ticket.tel,
+            creationDate: Date.now(),
             ...(ticket.description && {
                 description: ticket.description
             }),
